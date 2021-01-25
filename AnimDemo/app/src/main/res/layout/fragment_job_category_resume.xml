@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_resume_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:text="完善下面信息，留住本来属于你的机会！"
+        android:textSize="13sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_resume_submit"
+        app:layout_constraintEnd_toStartOf="@+id/tv_resume_submit"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_resume_submit" />
+
+    <CheckBox
+        android:id="@+id/tv_resume_submit"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="20dp"
+        android:button="@null"
+        android:checked="false"
+        android:gravity="center"
+        android:text="确定"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_resume_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="为应聘货车司机，说说你有哪些优势？为应聘货车司机"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_resume_submit" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_resume_tags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_resume_desc" />
+</androidx.constraintlayout.widget.ConstraintLayout>
